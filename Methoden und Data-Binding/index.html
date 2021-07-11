@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first vue.js app</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Name: {{manager.name}}</h1>
+        <h1>Alter: {{manager.age}}</h1>
+        <h2>{{sayHello()}}</h2>
+        <h3><a v-bind:href="website">google</a></h3><!-- Oder v-bind weglassen und einfach nur :href -->
+        <input type="text" :value="manager.name"><!--------------------------------------------^^^^^^-->
+        <h3 v-html="aTag"></h3>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
