@@ -1,4 +1,4 @@
-new Vue({
+new Vue({ 
   el:'#app',
   data:{//in data werden Objekte Keys oder Variabeln geschrieben
     manager:{
