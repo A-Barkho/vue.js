@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first vue.js app</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="name"><!--das hier nennt man tow-way data binding ein use case dafür ist z.B. das Entwickeln einer Suchleiste indem jedes 
+         Mal man etwas tippt ändern sich die Vorschläge-->
+        <h2>{{ name }}</h2>   <!-- templating technik {{}} -->           <!--das hier nennt man tow-way data binding ein use case dafür ist z.B. das Entwickeln einer Suchleiste indem jedes 
+         Mal man etwas tippt ändern sich die Vorschläge-->
+        <p v-if="name.length < 8">Das Passwort muss mindestens 8 Zeichen sein</p> <!-- Bedingungen in Vue -->
+        <p v-else-if="name.length >= 8 && name.length < 10">Passwort ist sicher, konnte aber mit 10 Zeichen noch sicherer werden </p> <!-- Bedingungen in Vue -->
+        <p v-else>Passwort ist sicher</p><!-- Bedingungen in Vue -->
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

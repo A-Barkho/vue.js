@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Was ist eine v-for Schleife-Directive</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Was ist eine v-for Schleife-Directive</h1>
+        <p v-for="name in names">{{ name }}</p>
+        <p v-for="(person, index) in persons">{{index+1}}- Name: <b>{{ person.name }}</b> - Alter: <b>{{person.age}}</b></p><!-------oder-------->
+        <!-------------------------------oder----------------------------------------->
+        <h1>oder Verschachtelte for Schleife</h1>
+        <template v-for="person in persons">
+            <div v-for="(value, key) in person">
+                <p>{{ value }}</p>
+                <p>{{ key }}</p>
+            </div>
+        </template>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
