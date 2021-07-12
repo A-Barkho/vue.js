@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events und Event Modifier</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+     
+    <div id="app">
+        <h3>{{ myValue }}</h3>
+        <!--<button v-on:click="myValue++">+</button>-->
+        <button v-on:click="add()" v-on:mouseover="add()">+</button><!-- hier könnte man bei vue.js die runden Klammern weglassen und einfach add reinschreiben -->
+        <!--<button v-on:click="myValue--">-</button>-->
+        <button v-on:click="substract()" v-on:mouseover="substract()">-</button>
+
+        <button v-on:click.once="add">nur 1 Mal +</button><!-- .once ist ein Event Modifier -->
+
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
