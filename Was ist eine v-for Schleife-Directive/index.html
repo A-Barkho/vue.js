@@ -15,9 +15,8 @@
         <!-------------------------------oder----------------------------------------->
         <h1>oder Verschachtelte for Schleife</h1>
         <template v-for="person in persons">
-            <div v-for="(value, key) in person">
+            <div v-for="(value) in person">
                 <p>{{ value }}</p>
-                <p>{{ key }}</p>
             </div>
         </template>
     </div>
